@@ -5,8 +5,8 @@ metadata:
 provisioner: kubernetes.io/azure-file
 parameters:
   skuName: Standard_LRS
-  resourceGroup: ubs
-  storageAccount: fileshareubstest4
+  resourceGroup: demo
+  storageAccount: filesharedemotest4
   shareName: sample1
 reclaimPolicy: Retain
 allowVolumeExpansion: true
