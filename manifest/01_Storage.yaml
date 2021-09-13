@@ -1,0 +1,13 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: filesharesmb4
+provisioner: kubernetes.io/azure-file
+parameters:
+  skuName: Standard_LRS
+  resourceGroup: ubs
+  storageAccount: fileshareubstest4
+  shareName: sample1
+reclaimPolicy: Retain
+allowVolumeExpansion: true
+volumeBindingMode: Immediate
