@@ -1,10 +1,10 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: mypod3
+  name: myakspod1
 spec:
   containers:
-  - name: mypod3
+  - name: mypod
     image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
     resources:
       requests:
@@ -19,4 +19,4 @@ spec:
   volumes:
     - name: volume
       persistentVolumeClaim:
-        claimName: my-azurefile3
+        claimName: my-azurefile2
