@@ -26,7 +26,7 @@ Steps to implement the File share mount based on AKS Managed user Identity
 
 ## Errors (Including new PV process)
 
-### Stage 1:
+### Stage 1: (First Time Goes Successfully)
 
 PS C:\Kali\Learning\POC\Fileshare\manifest> kubectl get pods
 NAME READY STATUS RESTARTS AGE
