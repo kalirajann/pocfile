@@ -35,6 +35,7 @@ myakspodcsi 0/1 ContainerCreating 0 7h24m
 myapp-deploymentkey-67465fb9df-6gxpt 1/1 Running 0 5s
 myapp-deploymentkey-67465fb9df-gxz6w 1/1 Running 0 95s
 myapp-deploymentkey-67465fb9df-h6vn8 1/1 Running 0 5s
+
 PS C:\Kali\Learning\POC\Fileshare\manifest> kubectl exec -it myapp-deploymentkey-67465fb9df-gxz6w -- /bin/sh
 / # cd mnt/az
 /mnt/az # ls
@@ -43,6 +44,7 @@ PS C:\Kali\Learning\POC\Fileshare\manifest> kubectl exec -it myapp-deploymentkey
 /mnt/az # ls
 1.txt 2.txt
 /mnt/az # exit
+
 PS C:\Kali\Learning\POC\Fileshare\manifest> kubectl exec -it myapp-deploymentkey-67465fb9df-h6vn8 -- /bin/sh
 / # ls
 bin dev etc home lib media mnt proc root run sbin srv sys tmp usr var
@@ -52,7 +54,6 @@ bin dev etc home lib media mnt proc root run sbin srv sys tmp usr var
 /mnt/az # ls
 1.txt 2.txt
 /mnt/az # exit
-PS C:\Kali\Learning\POC\Fileshare\manifest>
 
 ### Stage 2: (First key Rotation)
 
