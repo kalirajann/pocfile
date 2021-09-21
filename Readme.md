@@ -93,8 +93,8 @@ default 10s Normal ScalingReplicaSet deployment/myapp-deploymentkey1 Scaled up r
 
 ##### Creating new PV process
 
-Created PV & PVC
-Error of Deployment based on new PVC
+- Created PV & PVC
+- Error of Deployment based on new PVC
 default 7s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-fl7md Unable to attach or mount volumes: unmounted volumes=[volume], unattached volumes=[volume kube-api-access-ws2h5]: timed out waiting for the condition
 default 3s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-llxfq MountVolume.SetUp failed for volume "pvc-80503e42-1821-499f-908b-91747f6a7213" : mount failed: exit status 32
 Mounting command: mount
