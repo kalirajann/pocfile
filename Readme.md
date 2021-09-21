@@ -66,7 +66,7 @@ bin dev etc home lib media mnt proc root run sbin srv sys tmp usr var
 /mnt/az #
 
 ##### Create new deployment (with reference of existing PVC)
-
+```
 default 13s Warning FailedMount pod/myapp-deploymentkey1-67465fb9df-9xcrz MountVolume.SetUp failed for volume "pvc-c1316e2e-11e6-427e-a0d2-d192c35bd6e7" : mount failed: exit status 32
 Mounting command: mount
 Mounting arguments: -t cifs -o file_mode=0777,dir_mode=0777,vers=3.0,actimeo=30,mfsymlinks,<masked> //aksdemokali.file.core.windows.net/sample1 /var/lib/kubelet/pods/53aa3886-2a89-4c9a-8f0b-0c6a5fb1fb08/volumes/kubernetes.io~azure-file/pvc-c1316e2e-11e6-427e-a0d2-d192c35bd6e7
@@ -77,11 +77,13 @@ Mounting command: mount
 Mounting arguments: -t cifs -o file_mode=0777,dir_mode=0777,vers=3.0,actimeo=30,mfsymlinks,<masked> //aksdemokali.file.core.windows.net/sample1 /var/lib/kubelet/pods/858b2f9e-06b1-4000-85c3-104b981e537d/volumes/kubernetes.io~azure-file/pvc-c1316e2e-11e6-427e-a0d2-d192c35bd6e7
 Output: mount error(13): Permission denied
 Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+```
 
 ##### Create new PVC (with a reference of storage class)
 
 New PVC created -> default 31s Normal ProvisioningSucceeded persistentvolumeclaim/my-pvckey1 Successfully provisioned volume pvc-714a2112-fc31-44b5-8a26-7c80ec323d23 using kubernetes.io/azure-file
 
+  ```
 Error While creating with new deployment with a reference of new PVC
 default 2s Warning FailedMount pod/myapp-deploymentkey1-86c6f69b4b-rd9rr MountVolume.SetUp failed for volume "pvc-714a2112-fc31-44b5-8a26-7c80ec323d23" : mount failed: exit status 32
 Mounting command: mount
@@ -90,14 +92,16 @@ Output: mount error(13): Permission denied
 Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
 default 10s Normal SuccessfulCreate replicaset/myapp-deploymentkey1-86c6f69b4b Created pod: myapp-deploymentkey1-86c6f69b4b-rd9rr
 default 10s Normal ScalingReplicaSet deployment/myapp-deploymentkey1 Scaled up replica set myapp-deploymentkey1-86c6f69b4b t
+  ```
 
 ##### Creating new PV process
 
 - Created PV & PVC
 - Error of Deployment based on new PVC
-default 7s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-fl7md Unable to attach or mount volumes: unmounted volumes=[volume], unattached volumes=[volume kube-api-access-ws2h5]: timed out waiting for the condition
+```default 7s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-fl7md Unable to attach or mount volumes: unmounted volumes=[volume], unattached volumes=[volume kube-api-access-ws2h5]: timed out waiting for the condition
 default 3s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-llxfq MountVolume.SetUp failed for volume "pvc-80503e42-1821-499f-908b-91747f6a7213" : mount failed: exit status 32
 Mounting command: mount
 Mounting arguments: -t cifs -o file_mode=0777,dir_mode=0777,vers=3.0,actimeo=30,mfsymlinks,<masked> //aksdemokali.file.core.windows.net/sample1 /var/lib/kubelet/pods/9d024cd3-f744-425d-822f-278fc18ef209/volumes/kubernetes.io~azure-file/pvc-80503e42-1821-499f-908b-91747f6a7213
 Output: mount error(13): Permission denied
 Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+  ```
