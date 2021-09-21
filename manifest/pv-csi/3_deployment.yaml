@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: #Dictionary
+  name: myapp-deployment
+spec: # Dictionary
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:  
+    metadata: # Dictionary
+      name: myapp-pod
+      labels: # Dictionary
+        app: myapp  # Key value paids
+    spec:
+      containers:
+      - name: mypod
+        image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        volumeMounts:
+        - mountPath: "/mnt/az"
+          name: volume
+      volumes:
+        - name: volume
+          persistentVolumeClaim:
+            claimName: my-csipv
