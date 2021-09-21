@@ -8,6 +8,7 @@ parameters:
   resourceGroup: ubs
   storageAccount: ubskalistorage
   server: ubskalistorage.privatelink.file.core.windows.net
+  shareName: sample1
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 mountOptions:

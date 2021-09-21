@@ -1,12 +1,12 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: fileshare
+  name: filesharekey1.0
 provisioner: kubernetes.io/azure-file
 parameters:
   skuName: Standard_LRS
-  resourceGroup: aksdemo
-  storageAccount: aksdemostorage2
+  resourceGroup: ubs
+  storageAccount: aksdemokali
   shareName: sample1
 reclaimPolicy: Retain
 allowVolumeExpansion: true

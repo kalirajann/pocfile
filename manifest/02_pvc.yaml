@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-azurefile2
+  name: my-pvckey1.0
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: fileshare1.1
+  storageClassName: filesharekey1.0
   resources:
     requests:
       storage: 1Gi
