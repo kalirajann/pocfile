@@ -1,0 +1,97 @@
+kubectl get secret --all-namespaces | grep demostorageubs (No result)
+
+
+kubectl get secret --all-namespaces
+NAMESPACE         NAME                                             TYPE                                  DATA   AGE
+default           default-token-g6nm6                              kubernetes.io/service-account-token   3      14h
+kube-node-lease   default-token-4qs8f                              kubernetes.io/service-account-token   3      14h
+kube-public       default-token-5wjkb                              kubernetes.io/service-account-token   3      14h
+kube-system       attachdetach-controller-token-qpb6x              kubernetes.io/service-account-token   3      14h
+kube-system       azure-cloud-provider-token-xmwsm                 kubernetes.io/service-account-token   3      14h
+kube-system       bootstrap-signer-token-wt6bb                     kubernetes.io/service-account-token   3      14h
+kube-system       certificate-controller-token-b68sn               kubernetes.io/service-account-token   3      14h
+kube-system       clusterrole-aggregation-controller-token-cf4rv   kubernetes.io/service-account-token   3      14h
+kube-system       coredns-autoscaler-token-hwvr9                   kubernetes.io/service-account-token   3      14h
+kube-system       coredns-token-xdhjk                              kubernetes.io/service-account-token   3      14h
+kube-system       cronjob-controller-token-278ms                   kubernetes.io/service-account-token   3      14h
+kube-system       csi-azuredisk-node-sa-token-ggjzh                kubernetes.io/service-account-token   3      14h
+kube-system       csi-azurefile-node-sa-token-fscf4                kubernetes.io/service-account-token   3      14h
+kube-system       daemon-set-controller-token-gvlbv                kubernetes.io/service-account-token   3      14h
+kube-system       default-token-rs2m2                              kubernetes.io/service-account-token   3      14h
+kube-system       deployment-controller-token-jhmkc                kubernetes.io/service-account-token   3      14h
+kube-system       disruption-controller-token-7q5rt                kubernetes.io/service-account-token   3      14h
+kube-system       endpoint-controller-token-mthqx                  kubernetes.io/service-account-token   3      14h
+kube-system       endpointslice-controller-token-zpjb4             kubernetes.io/service-account-token   3      14h
+kube-system       endpointslicemirroring-controller-token-r7hj9    kubernetes.io/service-account-token   3      14h
+kube-system       ephemeral-volume-controller-token-5vvnw          kubernetes.io/service-account-token   3      14h
+kube-system       expand-controller-token-c77r8                    kubernetes.io/service-account-token   3      14h
+kube-system       generic-garbage-collector-token-7mc2j            kubernetes.io/service-account-token   3      14h
+kube-system       horizontal-pod-autoscaler-token-t7t5c            kubernetes.io/service-account-token   3      14h
+kube-system       job-controller-token-j9cfm                       kubernetes.io/service-account-token   3      14h
+kube-system       kube-proxy-token-lnw5q                           kubernetes.io/service-account-token   3      14h
+kube-system       metrics-server-token-jfdwv                       kubernetes.io/service-account-token   3      14h
+kube-system       namespace-controller-token-8t8cs                 kubernetes.io/service-account-token   3      14h
+kube-system       node-controller-token-jdrwc                      kubernetes.io/service-account-token   3      14h
+kube-system       omsagent-secret                                  Opaque                                2      14h
+kube-system       omsagent-token-6j6sl                             kubernetes.io/service-account-token   3      14h
+kube-system       persistent-volume-binder-token-mxsm4             kubernetes.io/service-account-token   3      14h
+kube-system       pod-garbage-collector-token-dvc66                kubernetes.io/service-account-token   3      14h
+kube-system       pv-protection-controller-token-fv58x             kubernetes.io/service-account-token   3      14h
+kube-system       pvc-protection-controller-token-tbxh2            kubernetes.io/service-account-token   3      14h
+kube-system       replicaset-controller-token-k298l                kubernetes.io/service-account-token   3      14h
+kube-system       replication-controller-token-tvrbh               kubernetes.io/service-account-token   3      14h
+kube-system       resourcequota-controller-token-vbsww             kubernetes.io/service-account-token   3      14h
+kube-system       root-ca-cert-publisher-token-f42r7               kubernetes.io/service-account-token   3      14h
+kube-system       route-controller-token-twtkg                     kubernetes.io/service-account-token   3      14h
+kube-system       service-account-controller-token-kng44           kubernetes.io/service-account-token   3      14h
+kube-system       service-controller-token-zmhgk                   kubernetes.io/service-account-token   3      14h
+kube-system       statefulset-controller-token-jc92q               kubernetes.io/service-account-token   3      14h
+kube-system       token-cleaner-token-kq58t                        kubernetes.io/service-account-token   3      14h
+kube-system       ttl-after-finished-controller-token-v9xms        kubernetes.io/service-account-token   3      14h
+kube-system       ttl-controller-token-rbj9f                       kubernetes.io/service-account-token   3      14h
+kube-system       tunnelend                                        Opaque                                2      13h
+kube-system       tunnelfront                                      Opaque                                2      13h
+kube-system       tunnelfront-tls                                  Opaque                                2      14h
+kube-system       tunnelfront-token-6tp79                          kubernetes.io/service-account-token   3      14h
+
+
+
+
+
+
+
+PS /home/kalirajan> kubectl get po -o wide -n kube-system | grep csi-azurefile-controller
+No Output
+
+
+PS /home/kalirajan> kubectl get po -o wide -n kube-system
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE                                NOMINATED NODE   READINESS GATES
+azure-ip-masq-agent-qm5b5             1/1     Running   0          14h   10.240.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+coredns-86846667d7-bqhqp              1/1     Running   0          14h   10.244.0.5   aks-agentpool-14229154-vmss000000   <none>           <none>
+coredns-86846667d7-phrk6              1/1     Running   0          14h   10.244.0.7   aks-agentpool-14229154-vmss000000   <none>           <none>
+coredns-autoscaler-5f85dc856b-h26j9   1/1     Running   0          14h   10.244.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+csi-azuredisk-node-vdsjb              3/3     Running   0          14h   10.240.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+csi-azurefile-node-zbtrb              3/3     Running   0          14h   10.240.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+kube-proxy-hw66z                      1/1     Running   0          14h   10.240.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+metrics-server-6bc97b47f7-gmhxk       1/1     Running   0          14h   10.244.0.6   aks-agentpool-14229154-vmss000000   <none>           <none>
+omsagent-hrc9d                        2/2     Running   0          14h   10.244.0.2   aks-agentpool-14229154-vmss000000   <none>           <none>
+omsagent-rs-55b9ff95c4-9qhs9          1/1     Running   0          14h   10.244.0.8   aks-agentpool-14229154-vmss000000   <none>           <none>
+tunnelfront-5c5597c757-wkhpx          1/1     Running   0          14h   10.244.0.3   aks-agentpool-14229154-vmss000000   <none>           <none>
+
+
+PS /home/kalirajan> kubectl get po -o wide -n kube-system | grep csi-azurefile-node
+csi-azurefile-node-zbtrb              3/3     Running   0          14h   10.240.0.4   aks-agentpool-14229154-vmss000000   <none>           <none>
+
+
+kubectl logs csi-azurefile-node-zbtrb -c azurefile -n kube-system > csi-azurefile-node.log
+Captured in csi-azurefile-node.log
+
+
+kubectl exec -it csi-azurefile-node-zbtrb -n kube-system -c azurefile -- mount | grep cifs
+No Result
+
+kubectl exec -it csi-azurefile-node-zbtrb -n kube-system -c azurefile -- mount | grep nfs
+No Result
+
+
+

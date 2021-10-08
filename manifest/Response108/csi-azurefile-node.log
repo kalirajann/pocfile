@@ -1,0 +1,494 @@
+I1008 00:42:58.158816       1 main.go:99] set up prometheus server on [::]:29615
+I1008 00:42:58.291920       1 azurefile.go:230] 
+DRIVER INFORMATION:
+-------------------
+Build Date: "2021-09-05T07:18:30Z"
+Compiler: gc
+Driver Name: file.csi.azure.com
+Driver Version: v1.6.0
+Git Commit: 2e9c929d06657838a71c223fe96b2588d7f75ce6
+Go Version: go1.17
+Platform: linux/amd64
+
+Streaming logs below:
+I1008 00:42:58.291940       1 azurefile.go:233] driver userAgent: file.csi.azure.com/v1.6.0 gc/go1.17 (amd64-linux)
+I1008 00:42:58.448281       1 azure.go:70] reading cloud config from secret kube-system/azure-cloud-provider
+W1008 00:42:58.636303       1 azure.go:77] InitializeCloudFromSecret: failed to get cloud config from secret kube-system/azure-cloud-provider: failed to get secret kube-system/azure-cloud-provider: secrets "azure-cloud-provider" not found
+I1008 00:42:58.636326       1 azure.go:82] could not read cloud config from secret kube-system/azure-cloud-provider
+I1008 00:42:58.636332       1 azure.go:85] AZURE_CREDENTIAL_FILE env var set as /etc/kubernetes/azure.json
+I1008 00:42:58.636352       1 azure.go:100] read cloud config from file: /etc/kubernetes/azure.json successfully
+I1008 00:42:58.642121       1 azure_auth.go:96] azure: using managed identity extension to retrieve access token
+I1008 00:42:58.659440       1 azure.go:685] Azure cloudprovider using try backoff: retries=6, exponent=1.500000, duration=5, jitter=1.000000
+I1008 00:42:58.659493       1 azure_interfaceclient.go:70] Azure InterfacesClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.659499       1 azure_interfaceclient.go:73] Azure InterfacesClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.669119       1 azure_vmsizeclient.go:68] Azure VirtualMachineSizesClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.669133       1 azure_vmsizeclient.go:71] Azure VirtualMachineSizesClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.678957       1 azure_snapshotclient.go:69] Azure SnapshotClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.678970       1 azure_snapshotclient.go:72] Azure SnapshotClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.678978       1 azure_storageaccountclient.go:69] Azure StorageAccountClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.678981       1 azure_storageaccountclient.go:72] Azure StorageAccountClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699391       1 azure_diskclient.go:67] Azure DisksClient using API version: 2020-12-01
+I1008 00:42:58.699412       1 azure_diskclient.go:72] Azure DisksClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699417       1 azure_diskclient.go:75] Azure DisksClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699426       1 azure_vmclient.go:69] Azure VirtualMachine client (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699429       1 azure_vmclient.go:72] Azure VirtualMachine client (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699437       1 azure_vmssclient.go:69] Azure VirtualMachineScaleSetClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699442       1 azure_vmssclient.go:72] Azure VirtualMachineScaleSetClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699449       1 azure_vmssvmclient.go:70] Azure vmssVM client (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699453       1 azure_vmssvmclient.go:73] Azure vmssVM client (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699464       1 azure_routeclient.go:67] Azure RoutesClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699468       1 azure_routeclient.go:70] Azure RoutesClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699474       1 azure_subnetclient.go:68] Azure SubnetsClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699477       1 azure_subnetclient.go:71] Azure SubnetsClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699483       1 azure_routetableclient.go:67] Azure RouteTablesClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.699487       1 azure_routetableclient.go:70] Azure RouteTablesClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713770       1 azure_loadbalancerclient.go:69] Azure LoadBalancersClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713787       1 azure_loadbalancerclient.go:72] Azure LoadBalancersClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713795       1 azure_securitygroupclient.go:69] Azure SecurityGroupsClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713798       1 azure_securitygroupclient.go:72] Azure SecurityGroupsClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713805       1 azure_publicipclient.go:70] Azure PublicIPAddressesClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713808       1 azure_publicipclient.go:73] Azure PublicIPAddressesClient (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713818       1 azure_vmasclient.go:69] Azure AvailabilitySetsClient (read ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.713822       1 azure_vmasclient.go:72] Azure AvailabilitySetsClient  (write ops) using rate limit config: QPS=10, bucket=100
+I1008 00:42:58.720639       1 azure.go:902] attach/detach disk operation rate limit QPS: 6.000000, Bucket: 10
+I1008 00:42:58.720658       1 azure.go:131] starting node server on node(aks-agentpool-14229154-vmss000000)
+I1008 00:42:58.751369       1 mount_linux.go:192] Detected OS without systemd
+I1008 00:42:58.751389       1 driver.go:93] Enabling controller service capability: CREATE_DELETE_VOLUME
+I1008 00:42:58.751396       1 driver.go:93] Enabling controller service capability: PUBLISH_UNPUBLISH_VOLUME
+I1008 00:42:58.751452       1 driver.go:93] Enabling controller service capability: CREATE_DELETE_SNAPSHOT
+I1008 00:42:58.751457       1 driver.go:93] Enabling controller service capability: EXPAND_VOLUME
+I1008 00:42:58.751461       1 driver.go:112] Enabling volume access mode: SINGLE_NODE_WRITER
+I1008 00:42:58.751464       1 driver.go:112] Enabling volume access mode: SINGLE_NODE_READER_ONLY
+I1008 00:42:58.751468       1 driver.go:112] Enabling volume access mode: MULTI_NODE_READER_ONLY
+I1008 00:42:58.751470       1 driver.go:112] Enabling volume access mode: MULTI_NODE_SINGLE_WRITER
+I1008 00:42:58.751473       1 driver.go:112] Enabling volume access mode: MULTI_NODE_MULTI_WRITER
+I1008 00:42:58.751477       1 driver.go:103] Enabling node service capability: STAGE_UNSTAGE_VOLUME
+I1008 00:42:58.751510       1 driver.go:103] Enabling node service capability: GET_VOLUME_STATS
+I1008 00:42:58.751514       1 driver.go:103] Enabling node service capability: VOLUME_MOUNT_GROUP
+I1008 00:42:58.751646       1 server.go:118] Listening for connections on address: &net.UnixAddr{Name:"//csi/csi.sock", Net:"unix"}
+I1008 00:42:58.983177       1 utils.go:118] GRPC call: /csi.v1.Identity/GetPluginInfo
+I1008 00:42:58.983444       1 utils.go:119] GRPC request: {}
+I1008 00:42:58.989312       1 utils.go:125] GRPC response: {"name":"file.csi.azure.com","vendor_version":"v1.6.0"}
+I1008 00:42:59.593130       1 utils.go:118] GRPC call: /csi.v1.Identity/GetPluginInfo
+I1008 00:42:59.593226       1 utils.go:119] GRPC request: {}
+I1008 00:42:59.593340       1 utils.go:125] GRPC response: {"name":"file.csi.azure.com","vendor_version":"v1.6.0"}
+I1008 00:43:00.482519       1 utils.go:118] GRPC call: /csi.v1.Node/NodeGetInfo
+I1008 00:43:00.482536       1 utils.go:119] GRPC request: {}
+I1008 00:43:00.482570       1 utils.go:125] GRPC response: {"node_id":"aks-agentpool-14229154-vmss000000"}
+I1008 01:00:08.387302       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:00:08.387322       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:00:08.387632       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:00:08.433360       1 azurefile.go:568] could not get account(demostorageubs) key from secret(azure-storage-account-demostorageubs-secret), error: could not get secret(azure-storage-account-demostorageubs-secret): secrets "azure-storage-account-demostorageubs-secret" not found, use cluster identity to get account key instead
+I1008 01:00:09.399681       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+I1008 01:00:10.109915       1 nodeserver.go:267] volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" succeeded
+I1008 01:00:10.110041       1 utils.go:125] GRPC response: {}
+I1008 01:00:10.125077       1 utils.go:118] GRPC call: /csi.v1.Node/NodePublishVolume
+I1008 01:00:10.125144       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","target_path":"/var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"csi.storage.k8s.io/ephemeral":"false","csi.storage.k8s.io/pod.name":"1-azure-file-static-mi-f66f9f956-wmnrd","csi.storage.k8s.io/pod.namespace":"default","csi.storage.k8s.io/pod.uid":"f440f938-2424-460f-9713-4077c43fa21d","csi.storage.k8s.io/serviceAccount.name":"default","resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+I1008 01:00:10.125472       1 nodeserver.go:100] NodePublishVolume: mounting /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount at /var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount with mountOptions: [bind]
+I1008 01:00:10.128729       1 nodeserver.go:107] NodePublishVolume: mount /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount at /var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount successfully
+I1008 01:00:10.128787       1 utils.go:125] GRPC response: {}
+I1008 01:00:10.203787       1 utils.go:118] GRPC call: /csi.v1.Node/NodePublishVolume
+I1008 01:00:10.203953       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","target_path":"/var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"csi.storage.k8s.io/ephemeral":"false","csi.storage.k8s.io/pod.name":"2-azure-file-static-mi-cfc95bfc5-29h6z","csi.storage.k8s.io/pod.namespace":"default","csi.storage.k8s.io/pod.uid":"e19963f1-a3e1-4c3a-9610-065b656fa12b","csi.storage.k8s.io/serviceAccount.name":"default","resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+I1008 01:00:10.204247       1 nodeserver.go:100] NodePublishVolume: mounting /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount at /var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount with mountOptions: [bind]
+I1008 01:00:10.210700       1 nodeserver.go:107] NodePublishVolume: mount /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount at /var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount successfully
+I1008 01:00:10.210873       1 utils.go:125] GRPC response: {}
+E1008 01:02:31.282544       1 utils.go:123] GRPC error: rpc error: code = Internal desc = failed to get metrics: failed to get FsInfo due to error host is down
+E1008 01:03:20.126873       1 utils.go:123] GRPC error: rpc error: code = Internal desc = failed to get metrics: failed to get FsInfo due to error host is down
+E1008 01:04:11.189477       1 utils.go:123] GRPC error: rpc error: code = Internal desc = failed to get metrics: failed to get FsInfo due to error host is down
+E1008 01:05:07.151531       1 utils.go:123] GRPC error: rpc error: code = Internal desc = failed to get metrics: failed to get FsInfo due to error host is down
+E1008 01:05:16.255391       1 utils.go:123] GRPC error: rpc error: code = Internal desc = failed to get metrics: failed to get FsInfo due to error host is down
+I1008 01:05:31.382887       1 utils.go:118] GRPC call: /csi.v1.Node/NodeUnpublishVolume
+I1008 01:05:31.382904       1 utils.go:119] GRPC request: {"target_path":"/var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount","volume_id":"csi-test-109222"}
+I1008 01:05:31.382969       1 nodeserver.go:123] NodeUnpublishVolume: unmounting volume csi-test-109222 on /var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount
+I1008 01:05:31.383788       1 utils.go:118] GRPC call: /csi.v1.Node/NodeUnpublishVolume
+I1008 01:05:31.383798       1 utils.go:119] GRPC request: {"target_path":"/var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount","volume_id":"csi-test-109222"}
+I1008 01:05:31.383853       1 nodeserver.go:123] NodeUnpublishVolume: unmounting volume csi-test-109222 on /var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount
+W1008 01:05:31.410455       1 mount_helper_common.go:133] Warning: "/var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount" is not a mountpoint, deleting
+I1008 01:05:31.410504       1 nodeserver.go:127] NodeUnpublishVolume: unmount volume csi-test-109222 on /var/lib/kubelet/pods/f440f938-2424-460f-9713-4077c43fa21d/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount successfully
+I1008 01:05:31.410513       1 utils.go:125] GRPC response: {}
+W1008 01:05:31.422159       1 mount_helper_common.go:133] Warning: "/var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount" is not a mountpoint, deleting
+I1008 01:05:31.422211       1 nodeserver.go:127] NodeUnpublishVolume: unmount volume csi-test-109222 on /var/lib/kubelet/pods/e19963f1-a3e1-4c3a-9610-065b656fa12b/volumes/kubernetes.io~csi/pv-azure-file-static-mi/mount successfully
+I1008 01:05:31.422221       1 utils.go:125] GRPC response: {}
+I1008 01:05:31.484728       1 utils.go:118] GRPC call: /csi.v1.Node/NodeUnstageVolume
+I1008 01:05:31.484748       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_id":"csi-test-109222"}
+I1008 01:05:31.484800       1 nodeserver.go:313] NodeUnstageVolume: CleanupMountPoint volume csi-test-109222 on /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+W1008 01:05:31.496004       1 mount_helper_common.go:133] Warning: "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" is not a mountpoint, deleting
+I1008 01:05:31.496067       1 nodeserver.go:319] NodeUnstageVolume: CleanupMountPoint volume csi-test-109222 on /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/proxy-mount
+W1008 01:05:31.496083       1 mount_helper_common.go:34] Warning: Unmount skipped because path does not exist: /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/proxy-mount
+I1008 01:05:31.496088       1 nodeserver.go:323] NodeUnstageVolume: unmount volume csi-test-109222 on /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount successfully
+I1008 01:05:31.496096       1 utils.go:125] GRPC response: {}
+I1008 01:05:57.875912       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:05:57.875931       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:05:57.876023       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:05:57.876054       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:05:57.941642       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:05:57.941691       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:05:58.478959       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:05:58.478979       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:05:58.479069       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:05:58.479099       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:05:58.562928       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:05:58.562979       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:05:59.587419       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:05:59.587440       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:05:59.587532       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:05:59.587566       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:05:59.655144       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:05:59.655190       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:06:01.714995       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:06:01.715012       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:06:01.715096       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:06:01.715124       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:06:01.780030       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:06:01.780081       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:06:05.840204       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:06:05.840224       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:06:05.840310       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:06:05.840338       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:06:05.863616       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:06:05.863659       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:06:13.903789       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:06:13.903810       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:06:13.903932       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:06:13.903968       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:06:13.925841       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:06:13.925893       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:06:29.946417       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:06:29.946437       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:06:29.946651       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:06:29.946749       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:06:29.968824       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:06:29.968861       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:07:01.999377       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:07:01.999399       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:07:01.999489       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:07:01.999517       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:07:02.035732       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:07:02.035785       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:08:06.138974       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:08:06.139181       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:08:06.139449       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:08:06.139598       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:08:06.221690       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:08:06.221761       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:10:08.283863       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:10:08.283883       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:10:08.284009       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:10:08.284042       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:10:08.359003       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:10:08.359046       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:12:10.379872       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:12:10.380093       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:12:10.380310       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:12:10.380468       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:12:10.446367       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:12:10.446419       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:14:12.518197       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:14:12.518215       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:14:12.518302       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:14:12.518337       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:14:12.559431       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:14:12.559688       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:16:14.564034       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:16:14.564057       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:16:14.564152       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:16:14.564184       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:16:14.601362       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:16:14.601404       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:18:16.631827       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:18:16.631847       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:18:16.631948       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:18:16.631979       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:18:16.665121       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:18:16.665164       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:20:18.738203       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:20:18.738223       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:20:18.738317       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:20:18.738347       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:20:18.854902       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:20:18.854950       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:22:20.877060       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:22:20.877082       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:22:20.877181       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:22:20.877219       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:22:20.959198       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:22:20.959252       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:24:23.032958       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:24:23.032978       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs"},"volume_id":"csi-test-109222"}
+W1008 01:24:23.033063       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:24:23.033090       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:24:23.075128       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:24:23.075387       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:04.799417       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:04.799594       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:04.799768       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:04.799816       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:04.833990       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:04.834031       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:05.401921       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:05.401945       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:05.402169       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:05.402274       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:05.430718       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:05.430765       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:06.510797       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:06.511082       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:06.511366       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:06.511502       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:06.585862       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:06.585910       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:08.626515       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:08.626536       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:08.626622       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:08.626651       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:08.664336       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:08.664376       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:12.754873       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:12.754895       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:12.755096       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:12.755264       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:12.783352       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:12.783387       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:20.814262       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:20.814282       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:20.814374       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:20.814406       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:20.837246       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:20.837289       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:27:36.937330       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:27:36.937350       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:27:36.937486       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:27:36.937526       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:27:36.995699       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:27:36.995738       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+I1008 01:28:09.004678       1 utils.go:118] GRPC call: /csi.v1.Node/NodeStageVolume
+I1008 01:28:09.004720       1 utils.go:119] GRPC request: {"staging_target_path":"/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount","volume_capability":{"AccessType":{"Mount":{"mount_flags":["dir_mode=0777","file_mode=0777","uid=1000","gid=1000","mfsymlinks","nobrl"]}},"access_mode":{"mode":5}},"volume_context":{"resourceGroup":"demo","shareName":"sample1","storageAccount":"demostorageubs","storeAccountKey":"false"},"volume_id":"csi-test-109222"}
+W1008 01:28:09.004904       1 azurefile.go:504] parsing volumeID(csi-test-109222) return with error: error parsing volume id: "csi-test-109222", should at least contain two #
+I1008 01:28:09.004975       1 nodeserver.go:246] cifsMountPath(/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount) fstype() volumeID(csi-test-109222) context(map[resourceGroup:demo shareName:sample1 storageAccount:demostorageubs storeAccountKey:false]) mountflags([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl]) mountOptions([dir_mode=0777 file_mode=0777 uid=1000 gid=1000 mfsymlinks nobrl actimeo=30])
+E1008 01:28:09.058954       1 mount_linux.go:179] Mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
+
+E1008 01:28:09.058996       1 utils.go:123] GRPC error: rpc error: code = Internal desc = volume(csi-test-109222) mount "//demostorageubs.file.core.windows.net/sample1" on "/var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount" failed with mount failed: exit status 32
+Mounting command: mount
+Mounting arguments: -t cifs -o dir_mode=0777,file_mode=0777,uid=1000,gid=1000,mfsymlinks,nobrl,actimeo=30,<masked> //demostorageubs.file.core.windows.net/sample1 /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pv-azure-file-static-mi/globalmount
+Output: mount error(13): Permission denied
+Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) and kernel log messages (dmesg)
