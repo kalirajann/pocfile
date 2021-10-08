@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-pvckey1.0
+  name: my-pvckey1.3
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: filesharekey1.0
+  storageClassName: filesharekey1.3
   resources:
     requests:
       storage: 1Gi

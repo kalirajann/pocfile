@@ -26,7 +26,7 @@ Steps to implement the File share mount based on AKS Managed user Identity
 
 ## Errors (Including new PV process)
 
-### Stage 1:
+### Stage 1: (First Time)
 
 PS C:\Kali\Learning\POC\Fileshare\manifest> kubectl get pods
 NAME READY STATUS RESTARTS AGE
@@ -93,11 +93,11 @@ default 10s Normal ScalingReplicaSet deployment/myapp-deploymentkey1 Scaled up r
 
 ##### Creating new PV process
 
-Created PV & PVC
-Error of Deployment based on new PVC
-default 7s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-fl7md Unable to attach or mount volumes: unmounted volumes=[volume], unattached volumes=[volume kube-api-access-ws2h5]: timed out waiting for the condition
-default 3s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-llxfq MountVolume.SetUp failed for volume "pvc-80503e42-1821-499f-908b-91747f6a7213" : mount failed: exit status 32
-Mounting command: mount
-Mounting arguments: -t cifs -o file_mode=0777,dir_mode=0777,vers=3.0,actimeo=30,mfsymlinks,<masked> //aksdemokali.file.core.windows.net/sample1 /var/lib/kubelet/pods/9d024cd3-f744-425d-822f-278fc18ef209/volumes/kubernetes.io~azure-file/pvc-80503e42-1821-499f-908b-91747f6a7213
-Output: mount error(13): Permission denied
-Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)
+- Created PV & PVC
+- Error of Deployment based on new PVC
+  default 7s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-fl7md Unable to attach or mount volumes: unmounted volumes=[volume], unattached volumes=[volume kube-api-access-ws2h5]: timed out waiting for the condition
+  default 3s Warning FailedMount pod/myapp-deploymentkey2-69cc4ff897-llxfq MountVolume.SetUp failed for volume "pvc-80503e42-1821-499f-908b-91747f6a7213" : mount failed: exit status 32
+  Mounting command: mount
+  Mounting arguments: -t cifs -o file_mode=0777,dir_mode=0777,vers=3.0,actimeo=30,mfsymlinks,<masked> //aksdemokali.file.core.windows.net/sample1 /var/lib/kubelet/pods/9d024cd3-f744-425d-822f-278fc18ef209/volumes/kubernetes.io~azure-file/pvc-80503e42-1821-499f-908b-91747f6a7213
+  Output: mount error(13): Permission denied
+  Refer to the mount.cifs(8) manual page (e.g. man mount.cifs)

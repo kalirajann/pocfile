@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata: #Dictionary
-  name: myapp-deploymentkey1.0
+  name: myapp-deploymentkey1.2
 spec: # Dictionary
   replicas: 3
   selector:
@@ -29,4 +29,4 @@ spec: # Dictionary
       volumes:
         - name: volume
           persistentVolumeClaim:
-            claimName: my-pvckey1.0
+            claimName: my-pvckey1.2
